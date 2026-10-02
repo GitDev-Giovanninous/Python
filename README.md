@@ -1,2 +1,2 @@
 # Python
-Learning Python publishing my projects :
+Learning Python publishing my projects :)
