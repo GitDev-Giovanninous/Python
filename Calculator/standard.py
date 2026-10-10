@@ -1,4 +1,6 @@
 import scientific
+import chronology
+import sys
 
 def main():
 
@@ -13,7 +15,8 @@ def main():
 [4] [5] [6] [:]
 [1] [2] [3] [+]
 [0] [(] [)] [-]
-[=] [.]""")
+[=] [.] [q]
+[MO] [M-] [MC] """)
         
 
         user_input = input("\n>").lower().strip()
@@ -79,6 +82,8 @@ def main():
 
                     print(f"\n{operation} = {result}")
 
+                    chronology.save(f"{operation} = {result}")
+
                     operation = ""
 
                 except NameError:
@@ -96,6 +101,22 @@ def main():
             case "scientific":
 
                 scientific.main()
+
+            case "mo":
+
+                chronology.read()
+
+            case "m-":
+
+                chronology.delete()
+
+            case "mc":
+
+                chronology.delete_all()
+
+            case "q":
+
+                sys.exit()
 
             case _:
 

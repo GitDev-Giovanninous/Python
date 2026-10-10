@@ -1,9 +1,29 @@
 import scientific_operations as s
 import standard
+import chronology
+import sys
 
 def main():
 
-    result = None
+    operation = {
+        "sin": s.sin,
+        "cos": s.cos,
+        "tan": s.tan,
+        "arcsin": s.arcsin,
+        "arccos": s.arccos,
+        "arctan": s.arctan,
+        "x^2": s.square,                                                                                                           
+        "x^3": s.cube,
+        "sqrt": s.sqrt,
+        "3^sqrt": s.sqrt3,
+        "10^x": s.pow10,
+        "log": s.log,
+        "ln": s.ln,
+        "1/x": s.reciproco,
+        "abs": s.absolute,
+        "!": s.factorial,
+        "e^x": s.e_pow_x
+    }
 
     while True:
 
@@ -15,7 +35,8 @@ def main():
 [x^2] [x^3]
 [sqrt] [3^sqrt] [10^x]
 [log] [ln] [1/x]
-[abs] [!] [e^x]""")
+[abs] [!] [e^x]
+[MO] [M-] [MC] [q]""")
 
         user_input = input("\n>").lower().strip()
 
@@ -23,140 +44,56 @@ def main():
 
             standard.main()
 
-        number = float(input("\nNumber: ").strip())
+            continue
 
-        if type(number) == float:
+        elif user_input == "mo":
 
-            match user_input:
+            chronology.read()
 
-                case "sin":
+            continue
 
-                    result = s.sin(number)
+        elif user_input == "m-":
 
-                    print(f"Sin {number} = {result}")
+            chronology.delete()
 
-                    result = None
+            continue
 
-                case "cos":
+        elif user_input == "mc":
 
-                    result = s.cos(number)
+            chronology.delete_all()
 
-                    print(f"Cos {number} = {result}")
+            continue
 
-                    result = None
+        elif user_input == "q":
 
-                case "tan":
+            sys.exit()
 
-                    result = s.tan(number)
+        if user_input in operation:
 
-                    print(f"Tan {number} = {result}")
+            try:
 
-                    result = None
+                number = float(input("Number: "))
 
-                case "arcsin":
+            except ValueError:
 
-                    result = s.arcsin(number)
-                    print(f"arcsin {number} = {result}")
+                print("Error, retry")
 
-                    result = None
+                continue
 
-                case "arccos":
+            result = operation[user_input](number)
 
-                    result = s.arccos(number)
-                    print(f"arccos {number} = {result}")
+            result2 = f"{user_input} {number} = {result}"
 
-                    result = None
+            print(result2)
 
-                case "arctan":
+            chronology.save(result2)
 
-                    result = s.arctan(number)
-                    print(f"arctan {number} = {result}")
+        else:
 
-                    result = None
+            print("Operation not found, retry")
 
-                case "x^2":
+            continue
 
-                    result = s.square(number)
-                    print(f"{number}^2 = {result}")
 
-                    result = None
-
-                case "x^3":
-
-                    result = s.cube(number)
-                    print(f"{number}^3 = {result}")
-
-                    result = None
-
-                case "10^x":
-
-                    result = s.pow10(number)
-                    print(f"10^{number} = {result}")
-
-                    result = None
-
-                case "sqrt":
-
-                    result = s.sqrt(number)
-                    print(f"sqrt {number} = {result}")
-
-                    result = None
-
-                case "3^sqrt":
-
-                    result = s.sqrt3(number)
-                    print(f"3^sqrt {number} = {result}")
-
-                    result = None
-
-                case "log":
-
-                    result = s.log(number)
-                    print(f"log {number} = {result}")
-
-                    result = None
-
-                case "ln":
-
-                    result = s.ln(number)
-                    print(f"ln {number} = {result}")
-
-                    result = None
-
-                case "1/x":
-
-                    result = s.reciproco(number)
-                    print(f"1/{number} = {result}")
-
-                    result = None
-
-                case "abs":
-
-                    result = s.absolute(number)
-                    print(f"abs {number} = {result}")
-
-                    result = None
-
-                case "!":
-
-                    result = s.factorial(int(number))
-                    print(f"{number}! = {result}")
-
-                    result = None
-
-                case "e^x":
-
-                    result = s.e_pow_x(number)
-                    print(f"e^{number} = {result}")
-
-                    result = None
-
-                case _:
-
-                    print("Error")
-
-                    result = None
-
-                    continue
 if __name__ == "__main__":
     main()

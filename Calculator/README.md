@@ -9,6 +9,8 @@ Below, you’ll find more information about the project and how to use it.
 - Scientific operations (sin, cos, tan, etc.)
 - Input Management
 - Error Management
+- Calculation history (add, view, delete, delete all) 
+(To use these features, you must launch the file from within the folder itself.)
 
 # HOW TO USE
 
@@ -23,12 +25,13 @@ main.py - Contains the program startup.
 scientific.py - Contains the scientific calculator mode.
 standard.py - Contains the standard calculator mode.
 scientific_operations.py - Contains the scientific operation functions.
+chronology.py - Contains the functions for the chronology.
 
 # REQUIREMENTS:
 
-Python 3.x, but it's better Python 3.14.
+Python 3.x, but it's better Python 3.14/3.15.
 You don't have to install any libraries.
 
 # PROJECT VERSION:
 
-1.0
+1.1.0
