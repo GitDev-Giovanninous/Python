@@ -1,6 +1,5 @@
-import scientific
 import chronology
-import sys
+import menu
 
 def main():
 
@@ -9,13 +8,13 @@ def main():
     while True:
 
         print("""\n
-[Scientific C.]
+[Menu]
 
 [7] [8] [9] [x]
 [4] [5] [6] [:]
 [1] [2] [3] [+]
 [0] [(] [)] [-]
-[=] [.] [q]
+[=] [.]
 [MO] [M-] [MC] """)
         
 
@@ -98,9 +97,9 @@ def main():
 
                     operation = ""
 
-            case "scientific":
+            case "menu":
 
-                scientific.main()
+                menu.main()
 
             case "mo":
 
@@ -113,10 +112,6 @@ def main():
             case "mc":
 
                 chronology.delete_all()
-
-            case "q":
-
-                sys.exit()
 
             case _:
 

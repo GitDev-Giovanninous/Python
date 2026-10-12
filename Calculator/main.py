@@ -1,8 +1,8 @@
-import standard as st
+import menu
 
 def main():
 
-    st.main()
+    menu.main()
 
 if __name__ == "__main__":
     main()

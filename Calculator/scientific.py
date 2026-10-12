@@ -1,7 +1,6 @@
 import scientific_operations as s
-import standard
 import chronology
-import sys
+import menu
 
 def main():
 
@@ -28,7 +27,7 @@ def main():
     while True:
 
         print("""\n
-[Standard C.]
+[Menu]
 
 [sin] [cos] [tan]
 [arcsin] [arccos] [arctan]
@@ -36,13 +35,13 @@ def main():
 [sqrt] [3^sqrt] [10^x]
 [log] [ln] [1/x]
 [abs] [!] [e^x]
-[MO] [M-] [MC] [q]""")
+[MO] [M-] [MC]""")
 
         user_input = input("\n>").lower().strip()
 
-        if user_input == "standard":
+        if user_input == "menu":
 
-            standard.main()
+            menu.main()
 
             continue
 
@@ -63,10 +62,6 @@ def main():
             chronology.delete_all()
 
             continue
-
-        elif user_input == "q":
-
-            sys.exit()
 
         if user_input in operation:
 
@@ -93,7 +88,6 @@ def main():
             print("Operation not found, retry")
 
             continue
-
 
 if __name__ == "__main__":
     main()
