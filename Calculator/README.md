@@ -17,10 +17,7 @@ Below, you’ll find more information about the project and how to use it.
 
 # HOW TO USE
 
-To use it, you need to run the `main.py` file. You have two options for doing this:
-- Click on the `main.py` file from within the folder; your IDE will launch, and then you simply need to run the file.
-- Go to your computer's terminal and run:
-`python main.py` (make sure there are no other files with the same name).
+Run the file with the extension .exe and it'll run the program. 
 
 # FILE DESCRIPTIONS:
 
@@ -36,9 +33,8 @@ date.py - Contains the date-related functions and module entry point
 
 # REQUIREMENTS:
 
-Python 3.14 or higher
-You don't have to install any libraries.
+//
 
 # PROJECT VERSION:
 
-1.4.5
+1.5

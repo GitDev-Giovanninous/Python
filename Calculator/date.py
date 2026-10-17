@@ -7,7 +7,7 @@ def date_difference():
 
         d1 = dt.date.today()
 
-        d2 = input("Insert a data: (day/month/year) (press q for quit)")
+        d2 = input("\nInsert a data (day/month/year) (press q for quit): ")
 
         if d2 == "q":
 
@@ -19,7 +19,7 @@ def date_difference():
 
             if d2 < d1:
 
-                print("Error")
+                print("\nError")
 
                 continue
 
@@ -27,7 +27,7 @@ def date_difference():
 
             diff = diff.days
 
-            print(f"from {d1} to {d2} there are {diff} days left")
+            print(f"\nfrom {d1} to {d2} there are {diff} days left")
 
             return
 
