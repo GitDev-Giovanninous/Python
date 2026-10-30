@@ -1,40 +1,51 @@
-# CALCULATOR
+# SCIENTIFIC TOOLKIT
 
-Hii everyone, I’d like to introduce my first real project. It is a scientific calculator. 
-Below, you’ll find more information about the project and how to use it.
+Hi everyone! I'd like to introduce **Scientific Toolkit**, a modular scientific application designed to provide several useful mathematical, scientific and system-related tools in one place.
 
-# FUNCTIONALITY
+Below, you'll find more information about its features and how to use it.
 
-- Menu
-- Standard operations (+, -, x, :)
-- Scientific operations (sin, cos, tan, etc.)
-- Number base conversions (hexadecimal, octal, binary, decimal)
-- Date Difference (BETA)
-- Calculation history (add, view, delete, delete all) 
-(To use these features, you must launch the file from within the folder itself.)
-- Input Management
+## FUNCTIONALITY
+
+### Mathematics
+- Standard Calculator
+- Scientific Calculator
+- Mathematical operations and functions
+
+### Number Systems
+- Binary, Octal, Decimal and Hexadecimal conversions
+
+### Date & Time
+- Date Difference Calculator
+
+### Chemistry
+- Periodic Table
+- Element Lookup
+- Molar Mass Calculator
+- pH Calculator
+
+### Additional Features
+- Interactive Menu
+- Input Validation
 - Error Management
+- Modular Architecture
 
-# HOW TO USE
+## HOW TO USE
 
-Run the file with the extension .exe and it'll run the program. 
+Run the executable file (`.exe`) to launch the application.
 
-# FILE DESCRIPTIONS:
+Navigate through the main menu to access the different tools and functionalities.
 
-main.py - Contains the program startup.
-menu.py - Contains the calculator's menu
-scientific.py - Contains the scientific calculator mode.
-standard.py - Contains the standard calculator mode.
-scientific_operations.py - Contains the scientific operation functions.
-chronology.py - Contains the functions for calculation history.
-programmer.py - Contains the functions for the convertions and the startup
-date.py - Contains the date-related functions and module entry point
+## FILE DESCRIPTIONS
 
+The project is organized into multiple modules, each responsible for a specific functionality.
 
-# REQUIREMENTS:
+Each module handles its own operations, keeping the application organized and easier to maintain.
 
-//
+## REQUIREMENTS
 
-# PROJECT VERSION:
+- Windows operating system
+- No additional Python installation required when using the executable version.
 
-1.5
+## PROJECT VERSION
+
+**2.0 — Scientific Toolkit**
